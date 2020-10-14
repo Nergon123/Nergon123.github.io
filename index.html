@@ -9,7 +9,8 @@
     var y = 0;
     var elem = document.getElementById('A');
 function ex(){
-      x++;
+      x = getRandomInt(100)
+      y = getRandomInt(100);
       y++;
     elem.style.margin = x + "%" + y + "%";
       if(x>99){
@@ -19,9 +20,11 @@ function ex(){
         y=0;
       }
 }
-    while(true){
-    setTimeout(ex,100);
-    }
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+    setInterval(ex,1000);
+    
   </script>
   <style>
     h1 {
