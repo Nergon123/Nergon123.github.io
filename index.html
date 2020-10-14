@@ -8,7 +8,7 @@
     var x = 0;
     var y = 0;
     var elem = document.getElementById('A');
-    while(true){
+function ex(){
       x++;
       y++;
     elem.style.margin = x + "%" + y + "%";
@@ -18,6 +18,9 @@
       if(y>99){
         y=0;
       }
+}
+    while(true){
+    setTimeout(ex,100);
     }
   </script>
   <style>
