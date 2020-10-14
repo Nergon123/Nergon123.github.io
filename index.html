@@ -1,35 +1,45 @@
-<!DOCTYPE html>
-<html>
-<body>
+    <!DOCTYPE html>
+    <html>
+    <body>
 
-<h1>Site of Nergon123 on GitHub!</h1>
-<h3 id="A">My name is Peter</h3>
-  <script>
-    var x = 0;
-    var y = 0;
-    var elem = document.getElementById('A');
-function ex(){
-      x = getRandomInt(100)
-      y = getRandomInt(100);
-      y++;
-    elem.style.margin = x + "%" + y + "%";
-      if(x>99){
-        x=0;
-      }
-      if(y>99){
-        y=0;
-      }
-}
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-    setInterval(ex,10);
-    
-  </script>
-  <style>
-    h1 {
-      color:green;
+    <h1 id="r">Site of Nergon123 on GitHub!</h1>
+    <h3 id="A">My name is Peter</h3>
+    <script>
+        var x = 0;
+        var y = 0;
+        var elem = document.getElementById('A');
+    function ex(){
+    document.getElementById('r').style.color = getRandomColor();
+        x = getRandomInt(100)
+        y = getRandomInt(100);
+        y++;
+        elem.style.margin = x + "%" + y + "%";
+        if(x>99){
+            x=0;
+        }
+        if(y>99){
+            y=0;
+        }
     }
-  </style>
-</body>
-</html>
+    function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+    }
+        setInterval(ex,10);
+        function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+file:///home/nergon/Documents/Site/index.html
+    </script>
+    <style>
+        h1 {
+        color:green;
+        }
+    </style>
+    </body>
+    </html>
